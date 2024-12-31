@@ -6,10 +6,11 @@ import cv2
 from sklearn.model_selection import train_test_split
 from os import getcwd
 
-classes = ["cattle", "horse"]
+classes = ["laoda", "yiquan" , "haizhiyan"]
 # 1.标签路径
-labelme_path = r"C:/Users/xxxx/Desktop/images/dataset/cattle/"
-isUseTest = True  # 是否创建test集
+labelme_path = "/home/ma/yolov5/bottle_detect/labels/train/"
+images_path = "/home/ma/yolov5/bottle_detect/images/train/"
+isUseTest = False  # 是否创建test集
 # 3.获取待处理文件
 files = glob(labelme_path + "*.json")
 files = [i.replace("\\", "/").split("/")[-1].split(".json")[0] for i in files]
@@ -48,7 +49,7 @@ def ChangeToYolo5(files, txt_Name):
         list_file.write('%s/%s\n' % (wd, imagePath))
         out_file = open('%s/%s.txt' % (labelme_path, json_file_), 'w')
         json_file = json.load(open(json_filename, "r", encoding="utf-8"))
-        height, width, channels = cv2.imread(labelme_path + json_file_ + ".jpg").shape
+        height, width, channels = cv2.imread(images_path + json_file_ + ".jpg").shape
         for multi in json_file["shapes"]:
             points = np.array(multi["points"])
             xmin = min(points[:, 0]) if min(points[:, 0]) > 0 else 0
