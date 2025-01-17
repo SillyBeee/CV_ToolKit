@@ -17,6 +17,8 @@ CV 工具箱是一个图形用户界面 (GUI) 应用程序，用于对图像应�
 - realtime_pnp: 实时姿态估计工具(未完工)
 - Video_seperate: 视频帧分离工具
 - json_2_txt: 将json文件转换为txt文件(yolo数据集用)
+- Video_info.py: 视频信息提取工具
+- Video_loop.py: 视频循环拼接工具
 ## 安装
 
 1. 克隆仓库:
