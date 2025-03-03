@@ -19,7 +19,7 @@ def video_loop(video_path , output_path , repeat_time):
     cap.release()
     Video_writer.release()
 if __name__ == '__main__':
-    video_path = "/home/ma/Hero_ws/videos/shoot2.mkv"
-    output_path = "/home/ma/桌面/remote_shoot_videos/2.mp4"
-    repeat_time = 3
+    video_path = "/home/ma/桌面/remote_shoot_videos/cut.mp4"
+    output_path = "/home/ma/桌面/remote_shoot_videos/lo.mp4"
+    repeat_time = 4
     video_loop(video_path, output_path, repeat_time)
