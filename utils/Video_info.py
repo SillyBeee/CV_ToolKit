@@ -43,5 +43,5 @@ def print_video_info(video_path):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    video_path = "/home/ma/Hero_ws/videos/shoot2.mkv"
+    video_path = "/home/ma/桌面/remote_shoot_videos/cut.mp4"
     print_video_info(video_path)
